@@ -1,0 +1,12 @@
+* Wuoab Project(Wake up on another bed)
+It is a project for PDC Assignment Project.
+** Schedule [0/7]
+*** TODO Login & Sign up & Forget Password [0/1]
+**** TODO GUI 
+DEADLINE: <2019-11-17 Sun>
+*** TODO Main Frame
+*** TODO Hotel Searching Frame
+*** TODO Hotel Information Frame
+*** TODO Booking Frame 
+*** TODO Personal Information Frame
+*** TODO Order Information Frame
