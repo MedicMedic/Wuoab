@@ -6,14 +6,20 @@ import java.awt.*;
 public class BackgroundIcon{
     private ImageIcon backgroundIcon;
     private ImageIcon buttonPressedIcon;
-    public BackgroundIcon(String backgroundIconPath, String buttonPressedIconpath, int width, int height){
+    private ImageIcon buttonFocusIcon;
+    public BackgroundIcon(String backgroundIconPath, String buttonPressedIconPath, String buttonFocusIconPath,int width, int height){
         backgroundIcon = new ImageIcon(backgroundIconPath);
-        buttonPressedIcon = new ImageIcon(buttonPressedIconpath);
+        buttonPressedIcon = new ImageIcon(buttonPressedIconPath);
+        buttonFocusIcon = new ImageIcon(buttonFocusIconPath);
+
         Image image = backgroundIcon.getImage().getScaledInstance(width, height, 1);
         backgroundIcon = new ImageIcon(image);
 
         image = buttonPressedIcon.getImage().getScaledInstance(width, height, 1);
         buttonPressedIcon = new ImageIcon(image);
+
+        image = buttonFocusIcon.getImage().getScaledInstance(width, height, 1);
+        buttonFocusIcon = new ImageIcon(image);
     }
 
     public BackgroundIcon(String backgroundIconPath, int width, int height) {
@@ -27,6 +33,9 @@ public class BackgroundIcon{
     }
     public ImageIcon getBackgroundPressed(){
         return this.buttonPressedIcon;
+    }
+    public ImageIcon getButtonFocusIcon(){
+        return this.buttonFocusIcon;
     }
 }
 
