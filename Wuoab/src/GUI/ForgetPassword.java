@@ -17,8 +17,10 @@ import javax.swing.border.TitledBorder;
  */
 public class ForgetPassword extends JFrame {
     // instance field
+    JFrame thePreviousFrame;
 
-    public ForgetPassword() {
+    public ForgetPassword(JFrame thePreviousFrame) {
+        this.thePreviousFrame=thePreviousFrame;
         this.setBounds(0, 0, 1280, 745);
         this.setDefaultCloseOperation(new JFrame().EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
@@ -157,7 +159,8 @@ public class ForgetPassword extends JFrame {
      *  todo 
      */
     private void gotoLogin(){
-        System.out.println("hello");
+        dispose();
+        thePreviousFrame.setVisible(true);
     }
 
     private void addTextField(JLabel foudatonJLabel, String nameString, int height) {
@@ -169,7 +172,7 @@ public class ForgetPassword extends JFrame {
         foudatonJLabel.add(txtAccount);
     }
 
-    public static void main(String[] args) {
-        new ForgetPassword();
-    }
+//    public static void main(String[] args) {
+////        new ForgetPassword();
+//    }
 }
