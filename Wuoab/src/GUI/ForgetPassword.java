@@ -88,9 +88,9 @@ public class ForgetPassword extends JFrame {
         foundationJLabel.add(label);
 
         addTextField(foundationJLabel, " Security question ", 245);
-        addTextField(foundationJLabel, " Security question ", 245 + 75);
-        addTextField(foundationJLabel, " Security question ", 245 + 75 * 2);
-        addTextField(foundationJLabel, " Security question ", 245 + 75 * 3);
+        addTextField(foundationJLabel, " Security answer ", 245 + 75);
+        addTextField(foundationJLabel, " New password ", 245 + 75 * 2);
+        addTextField(foundationJLabel, " Confirm password ", 245 + 75 * 3);
 
         ImageJButton confirmButton = new ImageJButton(foundationJLabel,
                 "src/ConfirmButtonImage/confirmButton.png",
