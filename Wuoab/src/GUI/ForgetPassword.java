@@ -16,24 +16,24 @@ import javax.swing.border.TitledBorder;
  * @author anthony
  */
 public class ForgetPassword extends JFrame {
+
     // instance field
     JFrame thePreviousFrame;
+    JLabel backgroundLabel;
+    BackgroundIcon icon;
 
     public ForgetPassword(JFrame thePreviousFrame) {
-        this.thePreviousFrame=thePreviousFrame;
+        this.thePreviousFrame = thePreviousFrame;
         this.setBounds(0, 0, 1280, 745);
         this.setDefaultCloseOperation(new JFrame().EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
 
         // set background two
-        JLabel backgroundLabel = new JLabel();
+        backgroundLabel = new JLabel();
         backgroundLabel.setLayout(null);
-        ImageIcon background2 = new ImageIcon("src/image/忘记密码.jpg");
-        Image temp = background2.getImage().getScaledInstance(1280, 720, 1);
-        background2 = new ImageIcon(temp);
-
-        backgroundLabel.setIcon(background2);
+        icon = new BackgroundIcon("src/image/ForgetPsw.jpg", 1280, 720);
+        backgroundLabel.setIcon(icon.getBackground());
         this.add(backgroundLabel);
 
         // Todo: Add your code blow
@@ -64,7 +64,7 @@ public class ForgetPassword extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 backgroundLabel.removeAll();
-                ImageIcon background = new ImageIcon("src/image/重置密码.jpg");
+                ImageIcon background = new ImageIcon("src/image/ResetPsw.jpg");
                 Image temp = background.getImage().getScaledInstance(1280, 720, 1);
                 background = new ImageIcon(temp);
                 createInputLabel(backgroundLabel, background);
@@ -114,10 +114,8 @@ public class ForgetPassword extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 //clear the old components
                 foundationJLabel.removeAll();
-                ImageIcon background = new ImageIcon("src/image/忘记密码.jpg");
-                Image temp = background.getImage().getScaledInstance(1280, 720, 1);
-                background = new ImageIcon(temp);
-                createSuccessInfo(foundationJLabel, background);
+                icon = new BackgroundIcon("src/image/ForgetPsw.jpg", 1280, 720);
+                createSuccessInfo(foundationJLabel, icon.getBackground());
             }
         });
     }
@@ -125,7 +123,7 @@ public class ForgetPassword extends JFrame {
     private void createSuccessInfo(JLabel foundationJLabel, ImageIcon backgroundimage) {
         foundationJLabel.setIcon(backgroundimage);
         // Todo: Add your code blow
-        JLabel label = new JLabel("Reset success ！", JLabel.CENTER);
+        JLabel label = new JLabel("Reset successfully ！", JLabel.CENTER);
         label.setFont(new java.awt.Font("Brush Script Std", 0, 27));
         label.setBounds(440, 350, 400, 45);
         foundationJLabel.add(label);
@@ -154,11 +152,11 @@ public class ForgetPassword extends JFrame {
             }
         });
     }
+
     /**
-     * go to Login 
-     *  todo 
+     * go to Login todo
      */
-    private void gotoLogin(){
+    private void gotoLogin() {
         dispose();
         thePreviousFrame.setVisible(true);
     }

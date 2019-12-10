@@ -20,8 +20,9 @@ public class Login extends JFrame {
     private JPasswordField txtPassword;//密码框
     private JLabel sign;//注册链接
     private JLabel forgetPsw;//忘记密码链接
-    private JButton btnLogin;//登录按钮
+    private ImageJButton btnLogin;//登录按钮
     private JFrame theLoginFrame;
+    private BackgroundIcon icon;
 
     public Login() {
         this.setLayout(null);
@@ -31,10 +32,8 @@ public class Login extends JFrame {
         this.setResizable(false);
 
         // 背景图片
-        ImageIcon background1 = new ImageIcon("src/ImageResources/MainPage1.jpg");
-        Image temp1 = background1.getImage().getScaledInstance(1280, 745, 1);
-        background1 = new ImageIcon(temp1);
-        backgroundLabel = new JLabel(background1);
+        icon = new BackgroundIcon("src/image/Login1.jpg", 1280, 745);
+        backgroundLabel = new JLabel(icon.getBackground());
         backgroundLabel.setBounds(0, 0, 1280, 745);
 
         // 把内容窗格转化为JPanel，否则不能用方法setOpaque()来使内容窗格透明
@@ -49,22 +48,17 @@ public class Login extends JFrame {
         container();
 
         this.setVisible(true);
-        theLoginFrame=this;
+        theLoginFrame = this;
     }
 
-    public void init_background1(JLabel foundationJlabel) {   //雨伞张开
-        // 背景图片
-        ImageIcon background = new ImageIcon("src/ImageResources/MainPage1.jpg");
-        Image temp1 = background.getImage().getScaledInstance(1280, 745, 1);
-        background = new ImageIcon(temp1);
-        foundationJlabel.setIcon(background);
+    public void init_background1(JLabel foundationJLabel) {   //雨伞张开
+        icon = new BackgroundIcon("src/image/Login1.jpg", 1280, 745);
+        foundationJLabel.setIcon(icon.getBackground());
     }
 
-    public void init_background2(JLabel foundationJlabel) {   //雨伞合上
-        ImageIcon background2 = new ImageIcon("src/ImageResources/MainPage2.jpg");
-        Image temp1 = background2.getImage().getScaledInstance(1280, 745, 1);
-        background2 = new ImageIcon(temp1);
-        foundationJlabel.setIcon(background2);
+    public void init_background2(JLabel foundationJLabel) {   //雨伞合上
+        icon = new BackgroundIcon("src/image/Login2.jpg", 1280, 745);
+        foundationJLabel.setIcon(icon.getBackground());
     }
 
     public void container() {
@@ -83,14 +77,13 @@ public class Login extends JFrame {
         txtPassword.addFocusListener(new FocusListener() {
             @Override
             public void focusLost(FocusEvent e) {
-                System.out.println("hi");
+
                 init_background1(backgroundLabel);
                 contentPanel.revalidate();
             }
 
             @Override
             public void focusGained(FocusEvent e) {
-                System.out.println("hello");
                 init_background2(backgroundLabel);
                 contentPanel.revalidate();
             }
@@ -122,17 +115,18 @@ public class Login extends JFrame {
         });
 
         // btn登录
-        btnLogin = new JButton("Log In");
-        btnLogin.setBackground(new Color(137, 175, 220));
+        btnLogin = new ImageJButton(backgroundLabel, "src/ConfirmButtonImage/confirmButton.png",
+                "src/ConfirmButtonImage/confirmPressedButton.png",
+                "src/ConfirmButtonImage/confirmFocusedButton.png",
+                689, 465, 150, 40,
+                "Log In");
         btnLogin.setForeground(Color.WHITE);
         btnLogin.setFont(new java.awt.Font("Brush Script Std", 0, 18));
-        btnLogin.setBorderPainted(false);
-        btnLogin.setBounds(689, 465, 150, 40);
         contentPanel.add(btnLogin);
     }
 
-    public static void main(String[] args) {
-        new Login();
-    }
+//    public static void main(String[] args) {
+//        new Login();
+//    }
 
 }

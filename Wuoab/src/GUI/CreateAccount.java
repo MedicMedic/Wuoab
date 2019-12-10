@@ -20,27 +20,25 @@ import javax.swing.border.TitledBorder;
 public class CreateAccount extends JFrame {
     // instance field
 
+    JLabel backgroundLabel, label;
     JFrame thePreviousFrame;
+    BackgroundIcon icon;
+    ImageJButton confirmButton;
 
     public CreateAccount(JFrame one) {
-        this.thePreviousFrame=one;
+        this.thePreviousFrame = one;
         this.setBounds(0, 0, 1280, 745);
         this.setDefaultCloseOperation(new JFrame().EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
 
         // set background
-        JLabel backgroundLabel = new JLabel();
-        backgroundLabel.setLayout(null);
-        ImageIcon background = new ImageIcon("src/image/注册.jpg");
-        Image temp = background.getImage().getScaledInstance(1280, 720, 1);
-        background = new ImageIcon(temp);
-
-        backgroundLabel.setIcon(background);
+        icon = new BackgroundIcon("src/image/Register.jpg", 1280, 720);
+        backgroundLabel = new JLabel(icon.getBackground());
         this.add(backgroundLabel);
 
         // Todo: Add your code blow
-        JLabel label = new JLabel("Register in", JLabel.CENTER);
+        label = new JLabel("Register in", JLabel.CENTER);
         label.setFont(new java.awt.Font("Brush Script Std", 0, 25));
         label.setBounds(440, 120, 400, 45);
         backgroundLabel.add(label);
@@ -54,7 +52,7 @@ public class CreateAccount extends JFrame {
         addTextField(backgroundLabel, "Security answer", 360 + 65 * 2);
         addTextField(backgroundLabel, "Phone number", 360 + 65 * 3);
         //confirm button
-        ImageJButton confirmButton = new ImageJButton(backgroundLabel,
+        confirmButton = new ImageJButton(backgroundLabel,
                 "src/ConfirmButtonImage/confirmButton.png",
                 "src/ConfirmButtonImage/confirmPressedButton.png",
                 "src/ConfirmButtonImage/confirmFocusedButton.png",
@@ -73,10 +71,8 @@ public class CreateAccount extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 backgroundLabel.removeAll();
-                ImageIcon background = new ImageIcon("src/image/忘记密码.jpg");
-                Image temp = background.getImage().getScaledInstance(1280, 720, 1);
-                background = new ImageIcon(temp);
-                createSuccessInfo(backgroundLabel, background, thePreviousFrame);
+                icon = new BackgroundIcon("src/image/ForgetPsw.jpg",1280,720);
+                createSuccessInfo(backgroundLabel, icon.getBackground(), thePreviousFrame);
             }
         });
 
@@ -84,13 +80,13 @@ public class CreateAccount extends JFrame {
         this.setVisible(true);
     }
 
-    private void addTextField(JLabel foudatonJLabel, String nameString, int height) {
+    private void addTextField(JLabel foundationJLabel, String nameString, int height) {
         JTextField txtAccount = new JTextField(20);
         txtAccount.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(new Color(137, 175, 220)),
                 nameString, TitledBorder.LEFT, TitledBorder.TOP,
                 new java.awt.Font("Brush Script Std", 0, 14)));
         txtAccount.setBounds(440, height, 400, 55);
-        foudatonJLabel.add(txtAccount);
+        foundationJLabel.add(txtAccount);
     }
 
     private void createSuccessInfo(JLabel foundationJLabel, ImageIcon backgroundimage, JFrame thePrevious) {
@@ -100,7 +96,7 @@ public class CreateAccount extends JFrame {
         label.setFont(new java.awt.Font("Brush Script Std", 0, 27));
         label.setBounds(440, 350, 400, 45);
         foundationJLabel.add(label);
-//the Button
+        //the Button
         ImageJButton confirmButton = new ImageJButton(foundationJLabel,
                 "src/ConfirmButtonImage/confirmButton.png",
                 "src/ConfirmButtonImage/confirmPressedButton.png",
