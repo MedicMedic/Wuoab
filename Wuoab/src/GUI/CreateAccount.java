@@ -71,7 +71,7 @@ public class CreateAccount extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 backgroundLabel.removeAll();
-                icon = new BackgroundIcon("src/image/ForgetPsw.jpg",1280,720);
+                icon = new BackgroundIcon("src/image/ForgetPassword.jpg",1280,720);
                 createSuccessInfo(backgroundLabel, icon.getBackground(), thePreviousFrame);
             }
         });

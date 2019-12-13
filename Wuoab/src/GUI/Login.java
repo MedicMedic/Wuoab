@@ -32,7 +32,7 @@ public class Login extends JFrame {
         this.setResizable(false);
 
         // 背景图片
-        icon = new BackgroundIcon("src/image/Login1.jpg", 1280, 745);
+        icon = new BackgroundIcon("src/image/LoginUmbrellaOpen.jpg", 1280, 745);
         backgroundLabel = new JLabel(icon.getBackground());
         backgroundLabel.setBounds(0, 0, 1280, 745);
 
@@ -52,12 +52,12 @@ public class Login extends JFrame {
     }
 
     public void init_background1(JLabel foundationJLabel) {   //雨伞张开
-        icon = new BackgroundIcon("src/image/Login1.jpg", 1280, 745);
+        icon = new BackgroundIcon("src/image/LoginUmbrellaOpen.jpg", 1280, 745);
         foundationJLabel.setIcon(icon.getBackground());
     }
 
     public void init_background2(JLabel foundationJLabel) {   //雨伞合上
-        icon = new BackgroundIcon("src/image/Login2.jpg", 1280, 745);
+        icon = new BackgroundIcon("src/image/LoginUmbrellaClosed.jpg", 1280, 745);
         foundationJLabel.setIcon(icon.getBackground());
     }
 

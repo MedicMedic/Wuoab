@@ -32,7 +32,7 @@ public class ForgetPassword extends JFrame {
         // set background two
         backgroundLabel = new JLabel();
         backgroundLabel.setLayout(null);
-        icon = new BackgroundIcon("src/image/ForgetPsw.jpg", 1280, 720);
+        icon = new BackgroundIcon("src/image/ForgetPassword.jpg", 1280, 720);
         backgroundLabel.setIcon(icon.getBackground());
         this.add(backgroundLabel);
 
@@ -64,7 +64,7 @@ public class ForgetPassword extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 backgroundLabel.removeAll();
-                ImageIcon background = new ImageIcon("src/image/ResetPsw.jpg");
+                ImageIcon background = new ImageIcon("src/image/ResetPassword.jpg");
                 Image temp = background.getImage().getScaledInstance(1280, 720, 1);
                 background = new ImageIcon(temp);
                 createInputLabel(backgroundLabel, background);
@@ -114,7 +114,7 @@ public class ForgetPassword extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 //clear the old components
                 foundationJLabel.removeAll();
-                icon = new BackgroundIcon("src/image/ForgetPsw.jpg", 1280, 720);
+                icon = new BackgroundIcon("src/image/ForgetPassword.jpg", 1280, 720);
                 createSuccessInfo(foundationJLabel, icon.getBackground());
             }
         });
