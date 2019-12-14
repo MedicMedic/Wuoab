@@ -1,13 +1,14 @@
 package Tools;
 
-import GUI.*;
 import javax.swing.*;
 
 public class ImageJButton extends JButton {
 
-    public ImageJButton(JLabel backgroundLabel, String imagePath, String imagePressedPath, String imageFocusIcon, int x, int y, int width, int height, String buttonText) {
+    public ImageJButton(String buttonText) {
         super(buttonText);
+    }
 
+    public void paintBtn(JPanel contentPanel, String imagePath, String imagePressedPath, String imageFocusIcon, int x, int y, int width, int height) {
         setOpaque(false);
         setBorderPainted(false);
         setBounds(x, y, width, height);
@@ -19,9 +20,8 @@ public class ImageJButton extends JButton {
         this.setSelectedIcon(backgroundIcon.getButtonFocusIcon());
         this.setRolloverIcon(backgroundIcon.getButtonFocusIcon());
 
-        backgroundLabel.add(this);
+        contentPanel.add(this);
         // make the Text display on the center of Icon
         setHorizontalTextPosition(JButton.CENTER);
-
     }
 }
