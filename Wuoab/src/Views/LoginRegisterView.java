@@ -58,7 +58,7 @@ public class LoginRegisterView implements Observer {
 
     }
 
-    class Login extends LoginRegisterView {
+    public static class Login extends LoginRegisterView {
 
         JTextField txtName;
         JPasswordField txtPassword;
@@ -132,9 +132,11 @@ public class LoginRegisterView implements Observer {
         public JLabel getSign() {
             return sign;
         }
+
+
     }
 
-    class Register {
+    public class Register {
 
         JLabel backgroundLabel, label;
         JFrame thePreviousFrame;

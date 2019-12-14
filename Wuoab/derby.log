@@ -1,13 +1,2 @@
-----------------------------------------------------------------
-Sat Dec 14 16:13:46 CST 2019:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-016f-0378-7eb4-000007283250 
-on database directory /Users/anthony/Desktop/PDC_Project/Wuoab/WuoabDB with class loader sun.misc.Launcher$AppClassLoader@55f96302 
-Loaded from file:/Users/anthony/Desktop/PDC_Project/Wuoab/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_131-b11
-user.dir=/Users/anthony/Desktop/PDC_Project/Wuoab
-os.name=Mac OS X
-os.arch=x86_64
-os.version=10.15.2
-derby.system.home=null
-Database Class Loader started - derby.database.classpath=''
+Sat Dec 14 17:49:52 CST 2019 : Could not listen on port 1527 on host localhost:
+ java.net.BindException: Address already in use (Bind failed)

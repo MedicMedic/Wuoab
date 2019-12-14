@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/LENOVO/Desktop/Wuoab/Wuoab/src/Views/LoginRegisterView.java</file>
-            <file>file:/C:/Users/LENOVO/Desktop/Wuoab/Wuoab/src/GUI/Entry.java</file>
-            <file>file:/C:/Users/LENOVO/Desktop/Wuoab/Wuoab/src/GUI/Login.java</file>
-            <file>file:/C:/Users/LENOVO/Desktop/Wuoab/Wuoab/src/Test/Test.java</file>
+            <file>file:/Users/anthony/Desktop/PDC_Project/Wuoab/build.xml</file>
+            <file>file:/Users/anthony/Desktop/PDC_Project/Wuoab/src/Execution/User.java</file>
+            <file>file:/Users/anthony/Desktop/PDC_Project/Wuoab/manifest.mf</file>
+            <file>file:/Users/anthony/Desktop/PDC_Project/Wuoab/src/Tools/CreateDatabaseTable.java</file>
+            <file>file:/Users/anthony/Desktop/PDC_Project/Wuoab/src/Execution/WelcomToWuoab.java</file>
         </group>
     </open-files>
 </project-private>

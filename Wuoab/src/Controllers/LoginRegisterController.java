@@ -12,7 +12,7 @@ public class LoginRegisterController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() = )
+//        if(e.getSource() = this.view.login.get)
     }
 
     public void addModel(LoginRegisterModel model) {
