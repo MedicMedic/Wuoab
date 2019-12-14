@@ -115,9 +115,9 @@ public class Login extends JFrame {
         });
 
         // btn登录
-        btnLogin = new ImageJButton(backgroundLabel, "src/ConfirmButtonImage/confirmButton.png",
-                "src/ConfirmButtonImage/confirmPressedButton.png",
-                "src/ConfirmButtonImage/confirmFocusedButton.png",
+        btnLogin = new ImageJButton(backgroundLabel, "src/ConfirmButtonImages/confirmButton.png",
+                "src/ConfirmButtonImages/confirmPressedButton.png",
+                "src/ConfirmButtonImages/confirmFocusedButton.png",
                 689, 465, 150, 40,
                 "Log In");
         btnLogin.setForeground(Color.WHITE);

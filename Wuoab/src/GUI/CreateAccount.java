@@ -53,9 +53,9 @@ public class CreateAccount extends JFrame {
         addTextField(backgroundLabel, "Phone number", 360 + 65 * 3);
         //confirm button
         confirmButton = new ImageJButton(backgroundLabel,
-                "src/ConfirmButtonImage/confirmButton.png",
-                "src/ConfirmButtonImage/confirmPressedButton.png",
-                "src/ConfirmButtonImage/confirmFocusedButton.png",
+                "src/ConfirmButtonImages/confirmButton.png",
+                "src/ConfirmButtonImages/confirmPressedButton.png",
+                "src/ConfirmButtonImages/confirmFocusedButton.png",
                 560, 360 + 65 * 4, 150, 40,
                 "Confirm");
         confirmButton.setForeground(Color.WHITE);
@@ -98,9 +98,9 @@ public class CreateAccount extends JFrame {
         foundationJLabel.add(label);
         //the Button
         ImageJButton confirmButton = new ImageJButton(foundationJLabel,
-                "src/ConfirmButtonImage/confirmButton.png",
-                "src/ConfirmButtonImage/confirmPressedButton.png",
-                "src/ConfirmButtonImage/confirmFocusedButton.png",
+                "src/ConfirmButtonImages/confirmButton.png",
+                "src/ConfirmButtonImages/confirmPressedButton.png",
+                "src/ConfirmButtonImages/confirmFocusedButton.png",
                 560, 430, 160, 50,
                 "Go to log in");
         confirmButton.setForeground(Color.WHITE);

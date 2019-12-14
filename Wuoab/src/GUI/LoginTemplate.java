@@ -47,7 +47,7 @@ public class LoginTemplate extends JFrame {
 
         JSlider jSlider = new JSlider();
         // Todo: Add your code blow
-        ImageJButton test = new ImageJButton(backgroundLabel, "src/ConfirmButtonImage/confirmButton.png", "src/ConfirmButtonImage/confirmPressedButton.png","src/ConfirmButtonImage/confirmFocusedButton.png", 400, 500, 160, 50, "Confirm");
+        ImageJButton test = new ImageJButton(backgroundLabel, "src/ConfirmButtonImages/confirmButton.png", "src/ConfirmButtonImages/confirmPressedButton.png","src/ConfirmButtonImages/confirmFocusedButton.png", 400, 500, 160, 50, "Confirm");
 // setVisible should always be shown in the end
         this.setVisible(true);
     }

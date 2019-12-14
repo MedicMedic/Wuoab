@@ -46,9 +46,9 @@ public class ForgetPassword extends JFrame {
         addTextField(backgroundLabel, " Please input you account ", 350);
 //the Button
         ImageJButton confirmButton = new ImageJButton(backgroundLabel,
-                "src/ConfirmButtonImage/confirmButton.png",
-                "src/ConfirmButtonImage/confirmPressedButton.png",
-                "src/ConfirmButtonImage/confirmFocusedButton.png",
+                "src/ConfirmButtonImages/confirmButton.png",
+                "src/ConfirmButtonImages/confirmPressedButton.png",
+                "src/ConfirmButtonImages/confirmFocusedButton.png",
                 560, 450, 160, 50,
                 "Confirm");
         confirmButton.setForeground(Color.WHITE);
@@ -95,9 +95,9 @@ public class ForgetPassword extends JFrame {
         addTextField(foundationJLabel, " Confirm password ", 245 + 75 * 3);
 
         ImageJButton confirmButton = new ImageJButton(foundationJLabel,
-                "src/ConfirmButtonImage/confirmButton.png",
-                "src/ConfirmButtonImage/confirmPressedButton.png",
-                "src/ConfirmButtonImage/confirmFocusedButton.png",
+                "src/ConfirmButtonImages/confirmButton.png",
+                "src/ConfirmButtonImages/confirmPressedButton.png",
+                "src/ConfirmButtonImages/confirmFocusedButton.png",
                 560, 245 + 75 * 4, 160, 50,
                 "Confirm");
         confirmButton.setForeground(Color.WHITE);
@@ -129,9 +129,9 @@ public class ForgetPassword extends JFrame {
         foundationJLabel.add(label);
 //the Button
         ImageJButton confirmButton = new ImageJButton(foundationJLabel,
-                "src/ConfirmButtonImage/confirmButton.png",
-                "src/ConfirmButtonImage/confirmPressedButton.png",
-                "src/ConfirmButtonImage/confirmFocusedButton.png",
+                "src/ConfirmButtonImages/confirmButton.png",
+                "src/ConfirmButtonImages/confirmPressedButton.png",
+                "src/ConfirmButtonImages/confirmFocusedButton.png",
                 560, 430, 160, 50,
                 "Confirm");
         confirmButton.setForeground(Color.WHITE);
