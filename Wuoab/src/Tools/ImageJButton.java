@@ -1,5 +1,6 @@
-package GUI;
+package Tools;
 
+import GUI.*;
 import javax.swing.*;
 
 public class ImageJButton extends JButton {
