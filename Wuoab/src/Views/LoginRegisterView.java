@@ -85,6 +85,8 @@ public class LoginRegisterView implements Observer {
     }
 
     public void addController(LoginRegisterController controller) {
+        // Login
+        login.getConfirmButton().addActionListener(controller);
         // 去注册流程
         login.getSign().addMouseListener(controller);//跳转到注册界面
         register.getConfirmButton().addActionListener(controller);//回到登录界面
@@ -103,7 +105,7 @@ public class LoginRegisterView implements Observer {
 
     public class Login {
 
-        JTextField txtName;
+        JTextField uuid;
         JPasswordField txtPassword;
         JLabel sign, forgetPsw;
         ImageJButton btnLogin;
@@ -120,10 +122,10 @@ public class LoginRegisterView implements Observer {
             backgroundLabel.setIcon(icon.getBackground());
 
             // input ID
-            txtName = new JTextField(20);
-            txtName.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(new Color(137, 175, 220)), " Please input your ID ", TitledBorder.LEFT, TitledBorder.TOP, new java.awt.Font("Brush Script Std", 0, 14)));
-            txtName.setBounds(440, 280, 400, 65);
-            contentPanel.add(txtName);
+            uuid = new JTextField(20);
+            uuid.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(new Color(137, 175, 220)), " Please input your ID ", TitledBorder.LEFT, TitledBorder.TOP, new java.awt.Font("Brush Script Std", 0, 14)));
+            uuid.setBounds(440, 280, 400, 65);
+            contentPanel.add(uuid);
 
             // input password
             txtPassword = new JPasswordField(20);
@@ -176,6 +178,14 @@ public class LoginRegisterView implements Observer {
 
         public ImageJButton getConfirmButton() {
             return btnLogin;
+        }
+
+        public JTextField getUuid() {
+            return uuid;
+        }
+
+        public JPasswordField getTxtPassword() {
+            return txtPassword;
         }
 
         public void loginUmbrellaOpen(JLabel backgroundLabel) {
