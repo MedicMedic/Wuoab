@@ -1,8 +1,8 @@
-package Views;
+package src.Views;
 
-import Controllers.LoginRegisterController;
-import Tools.BackgroundIcon;
-import Tools.ImageJButton;
+import src.Controllers.LoginRegisterController;
+import src.Tools.BackgroundIcon;
+import src.Tools.ImageJButton;
 import java.awt.Color;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
@@ -40,7 +40,7 @@ public class LoginRegisterView implements Observer {
         initFrame.setResizable(false);
 
         // set background
-        BackgroundIcon icon = new BackgroundIcon("src/LoginRegisterImages/LoginBackground.jpg", 1280, 745);
+        BackgroundIcon icon = new BackgroundIcon("src/src/LoginRegisterImages/LoginBackground.jpg", 1280, 745);
         backgroundLabel = new JLabel(icon.getBackground());
         backgroundLabel.setBounds(0, 0, 1280, 745);
 
@@ -85,8 +85,6 @@ public class LoginRegisterView implements Observer {
     }
 
     public void addController(LoginRegisterController controller) {
-        // Login
-        login.getConfirmButton().addActionListener(controller);
         // 去注册流程
         login.getSign().addMouseListener(controller);//跳转到注册界面
         register.getConfirmButton().addActionListener(controller);//回到登录界面
@@ -105,7 +103,7 @@ public class LoginRegisterView implements Observer {
 
     public class Login {
 
-        JTextField uuid;
+        JTextField txtName;
         JPasswordField txtPassword;
         JLabel sign, forgetPsw;
         ImageJButton btnLogin;
@@ -118,14 +116,14 @@ public class LoginRegisterView implements Observer {
         public void paintLogin(JLabel backgroundLabel, JPanel contentPanel) {
             backgroundLabel.removeAll();
             contentPanel.removeAll();
-            BackgroundIcon icon = new BackgroundIcon("src/LoginRegisterImages/LoginUmbrellaOpen.jpg", 1280, 745);
+            BackgroundIcon icon = new BackgroundIcon("src/src/LoginRegisterImages/LoginUmbrellaOpen.jpg", 1280, 745);
             backgroundLabel.setIcon(icon.getBackground());
 
             // input ID
-            uuid = new JTextField(20);
-            uuid.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(new Color(137, 175, 220)), " Please input your ID ", TitledBorder.LEFT, TitledBorder.TOP, new java.awt.Font("Brush Script Std", 0, 14)));
-            uuid.setBounds(440, 280, 400, 65);
-            contentPanel.add(uuid);
+            txtName = new JTextField(20);
+            txtName.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(new Color(137, 175, 220)), " Please input your ID ", TitledBorder.LEFT, TitledBorder.TOP, new java.awt.Font("Brush Script Std", 0, 14)));
+            txtName.setBounds(440, 280, 400, 65);
+            contentPanel.add(txtName);
 
             // input password
             txtPassword = new JPasswordField(20);
@@ -158,9 +156,9 @@ public class LoginRegisterView implements Observer {
 
             // login button
             btnLogin = new ImageJButton("Confirm");
-            btnLogin.paintBtn(contentPanel, "src/ConfirmButtonImages/confirmButton.png",
-                    "src/ConfirmButtonImages/confirmPressedButton.png",
-                    "src/ConfirmButtonImages/confirmFocusedButton.png",
+            btnLogin.paintBtn(contentPanel, "src/src/ConfirmButtonImages/confirmButton.png",
+                    "src/src/ConfirmButtonImages/confirmPressedButton.png",
+                    "src/src/ConfirmButtonImages/confirmFocusedButton.png",
                     689, 465, 150, 40);
             btnLogin.setForeground(Color.WHITE);
             btnLogin.setFont(new java.awt.Font("Brush Script Std", 0, 18));
@@ -180,21 +178,13 @@ public class LoginRegisterView implements Observer {
             return btnLogin;
         }
 
-        public JTextField getUuid() {
-            return uuid;
-        }
-
-        public JPasswordField getTxtPassword() {
-            return txtPassword;
-        }
-
         public void loginUmbrellaOpen(JLabel backgroundLabel) {
-            BackgroundIcon icon = new BackgroundIcon("src/LoginRegisterImages/LoginUmbrellaOpen.jpg", 1280, 745);
+            BackgroundIcon icon = new BackgroundIcon("src/src/LoginRegisterImages/LoginUmbrellaOpen.jpg", 1280, 745);
             backgroundLabel.setIcon(icon.getBackground());
         }
 
         public void loginUmbrellaClosed(JLabel backgroundLabel) {
-            BackgroundIcon icon = new BackgroundIcon("src/LoginRegisterImages/LoginUmbrellaClosed.jpg", 1280, 745);
+            BackgroundIcon icon = new BackgroundIcon("src/src/LoginRegisterImages/LoginUmbrellaClosed.jpg", 1280, 745);
             backgroundLabel.setIcon(icon.getBackground());
         }
     }
@@ -211,7 +201,7 @@ public class LoginRegisterView implements Observer {
         public void paintRegister(JLabel backgroundLabel, JPanel contentPanel) {
             backgroundLabel.removeAll();
             contentPanel.removeAll();
-            BackgroundIcon icon = new BackgroundIcon("src/LoginRegisterImages/Register.jpg", 1280, 745);
+            BackgroundIcon icon = new BackgroundIcon("src/src/LoginRegisterImages/Register.jpg", 1280, 745);
             backgroundLabel.setIcon(icon.getBackground());
 
             // title
@@ -232,9 +222,9 @@ public class LoginRegisterView implements Observer {
 
             // confirm button
             confirmButton.paintBtn(contentPanel,
-                    "src/ConfirmButtonImages/confirmButton.png",
-                    "src/ConfirmButtonImages/confirmPressedButton.png",
-                    "src/ConfirmButtonImages/confirmFocusedButton.png",
+                    "src/src/ConfirmButtonImages/confirmButton.png",
+                    "src/src/ConfirmButtonImages/confirmPressedButton.png",
+                    "src/src/ConfirmButtonImages/confirmFocusedButton.png",
                     560, 370 + 65 * 4, 150, 40);
             confirmButton.setForeground(Color.WHITE);
             confirmButton.setFont(new java.awt.Font("Brush Script Std", 0, 18));
@@ -260,7 +250,7 @@ public class LoginRegisterView implements Observer {
         public void paintForgetPsw(JLabel backgroundLabel, JPanel contentPanel) {
             backgroundLabel.removeAll();
             contentPanel.removeAll();
-            BackgroundIcon icon = new BackgroundIcon("src/LoginRegisterImages/ForgetPassword.jpg", 1280, 745);
+            BackgroundIcon icon = new BackgroundIcon("src/src/LoginRegisterImages/ForgetPassword.jpg", 1280, 745);
             backgroundLabel.setIcon(icon.getBackground());
 
             // title
@@ -275,9 +265,9 @@ public class LoginRegisterView implements Observer {
 
             // confirm button
             confirmButton.paintBtn(contentPanel,
-                    "src/ConfirmButtonImages/confirmButton.png",
-                    "src/ConfirmButtonImages/confirmPressedButton.png",
-                    "src/ConfirmButtonImages/confirmFocusedButton.png",
+                    "src/src/ConfirmButtonImages/confirmButton.png",
+                    "src/src/ConfirmButtonImages/confirmPressedButton.png",
+                    "src/src/ConfirmButtonImages/confirmFocusedButton.png",
                     560, 450, 160, 50);
             confirmButton.setForeground(Color.WHITE);
             confirmButton.setFont(new java.awt.Font("Brush Script Std", 0, 18));
@@ -300,7 +290,7 @@ public class LoginRegisterView implements Observer {
         public void paintResetPsw(JLabel backgroundLabel, JPanel contentPanel) {
             backgroundLabel.removeAll();
             contentPanel.removeAll();
-            BackgroundIcon icon = new BackgroundIcon("src/LoginRegisterImages/ResetPassword.jpg", 1280, 745);
+            BackgroundIcon icon = new BackgroundIcon("src/src/LoginRegisterImages/ResetPassword.jpg", 1280, 745);
             backgroundLabel.setIcon(icon.getBackground());
 
             // title
@@ -317,9 +307,9 @@ public class LoginRegisterView implements Observer {
 
             // confirm button
             confirmButton.paintBtn(contentPanel,
-                    "src/ConfirmButtonImages/confirmButton.png",
-                    "src/ConfirmButtonImages/confirmPressedButton.png",
-                    "src/ConfirmButtonImages/confirmFocusedButton.png",
+                    "src/src/ConfirmButtonImages/confirmButton.png",
+                    "src/src/ConfirmButtonImages/confirmPressedButton.png",
+                    "src/src/ConfirmButtonImages/confirmFocusedButton.png",
                     560, 245 + 75 * 4, 160, 50);
             confirmButton.setForeground(Color.WHITE);
             confirmButton.setFont(new java.awt.Font("Brush Script Std", 0, 18));
@@ -343,7 +333,7 @@ public class LoginRegisterView implements Observer {
         public void paintResetPswSuccessfully(JLabel backgroundLabel, JPanel contentPanel) {
             backgroundLabel.removeAll();
             contentPanel.removeAll();
-            BackgroundIcon icon = new BackgroundIcon("src/LoginRegisterImages/ForgetPassword.jpg", 1280, 745);
+            BackgroundIcon icon = new BackgroundIcon("src/src/LoginRegisterImages/ForgetPassword.jpg", 1280, 745);
             backgroundLabel.setIcon(icon.getBackground());
 
             // success information
@@ -354,9 +344,9 @@ public class LoginRegisterView implements Observer {
 
             // confirm button
             confirmButton.paintBtn(contentPanel,
-                    "src/ConfirmButtonImages/confirmButton.png",
-                    "src/ConfirmButtonImages/confirmPressedButton.png",
-                    "src/ConfirmButtonImages/confirmFocusedButton.png",
+                    "src/src/ConfirmButtonImages/confirmButton.png",
+                    "src/src/ConfirmButtonImages/confirmPressedButton.png",
+                    "src/src/ConfirmButtonImages/confirmFocusedButton.png",
                     560, 430, 160, 50);
             confirmButton.setForeground(Color.WHITE);
             confirmButton.setFont(new java.awt.Font("Brush Script Std", 0, 18));

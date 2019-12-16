@@ -1,8 +1,7 @@
-package Controllers;
+package src.Controllers;
 
-import Models.LoginRegisterModel;
-import Views.LoginRegisterView;
-
+import src.Models.LoginRegisterModel;
+import src.Views.LoginRegisterView;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -10,8 +9,8 @@ import java.awt.event.MouseListener;
 
 public class LoginRegisterController implements ActionListener, MouseListener {
 
-    private LoginRegisterModel model;
-    private LoginRegisterView view;
+    LoginRegisterModel model;
+    LoginRegisterView view;
 
     public void addModel(LoginRegisterModel model) {
         this.model = model;
@@ -25,15 +24,15 @@ public class LoginRegisterController implements ActionListener, MouseListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == view.getRegister().getConfirmButton()) {
             view.getLogin().paintLogin(view.getBackgroundLabel(), view.getContentPanel());
-        } else if (e.getSource() == view.getForgetPsw().getConfirmButton()) {
+        }
+        else if(e.getSource() == view.getForgetPsw().getConfirmButton()){
             view.getResetPsw().paintResetPsw(view.getBackgroundLabel(), view.getContentPanel());
-        } else if (e.getSource() == view.getResetPsw().getConfirmButton()) {
+        }
+        else if(e.getSource() == view.getResetPsw().getConfirmButton()){
             view.getResetPswSuccessfully().paintResetPswSuccessfully(view.getBackgroundLabel(), view.getContentPanel());
-        } else if (e.getSource() == view.getResetPswSuccessfully().getConfirmButton()) {
+        }
+        else if(e.getSource() == view.getResetPswSuccessfully().getConfirmButton()){
             view.getLogin().paintLogin(view.getBackgroundLabel(), view.getContentPanel());
-        } else if (e.getSource() == view.getLogin().getConfirmButton()) {   // verify login information {uuid, password}
-            model.verifyLogin(view.getLogin().getUuid().getText(), String.valueOf(view.getLogin().getTxtPassword().getPassword()));
-            System.out.println(String.valueOf(view.getLogin().getTxtPassword().getPassword()));
         }
     }
 
@@ -41,10 +40,11 @@ public class LoginRegisterController implements ActionListener, MouseListener {
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == view.getLogin().getSign()) {
             view.getRegister().paintRegister(view.getBackgroundLabel(), view.getContentPanel());
-
-        } else if (e.getSource() == view.getLogin().getForgetPsw()) {
+        } 
+        else if (e.getSource() == view.getLogin().getForgetPsw()) {
             view.getForgetPsw().paintForgetPsw(view.getBackgroundLabel(), view.getContentPanel());
         }
+
     }
 
     @Override

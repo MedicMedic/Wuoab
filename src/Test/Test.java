@@ -1,7 +1,7 @@
-package Test;
-import Models.LoginRegisterModel;
-import Views.LoginRegisterView;
-import Controllers.LoginRegisterController;
+package src.Test;
+import src.Models.LoginRegisterModel;
+import src.Views.LoginRegisterView;
+import src.Controllers.LoginRegisterController;
 
 public class Test {
 
@@ -13,7 +13,7 @@ public class Test {
         LoginRegisterModel myModel = new LoginRegisterModel();
         LoginRegisterView myView = new LoginRegisterView();
         myModel.addObserver(myView);
-        System.out.println("233");
+        
         LoginRegisterController myController = new LoginRegisterController();
         //pass the reference of model and view to the controllor
         myController.addModel(myModel);
