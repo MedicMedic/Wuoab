@@ -13,7 +13,7 @@ public class Test {
         LoginRegisterModel myModel = new LoginRegisterModel();
         LoginRegisterView myView = new LoginRegisterView();
         myModel.addObserver(myView);
-        
+        System.out.println("233");
         LoginRegisterController myController = new LoginRegisterController();
         //pass the reference of model and view to the controllor
         myController.addModel(myModel);
