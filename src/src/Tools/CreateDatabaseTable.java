@@ -1,4 +1,4 @@
-package Tools;
+package src.Tools;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,8 +14,8 @@ public class CreateDatabaseTable {
     private static Statement statement;
     private static String createUserInformationTable = "CREATE TABLE UserInfo(" +
             "UUID INT primary key GENERATED ALWAYS AS IDENTITY (START WITH 19000000, INCREMENT BY 1), " +
-            "FirstName VARCHAR(255), " +
             "Surname VARCHAR(255), " +
+            "LastName VARCHAR(255), " +
             "ID VARCHAR(255), " +
             "PhoneNum VARCHAR(255), " +
             "Password VARCHAR(255), " +

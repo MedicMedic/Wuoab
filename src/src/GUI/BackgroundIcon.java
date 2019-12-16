@@ -1,6 +1,5 @@
-package Tools;
+package src.GUI;
 
-import GUI.*;
 import javax.swing.*;
 import java.awt.*;
 

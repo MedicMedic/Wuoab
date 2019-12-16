@@ -1,4 +1,4 @@
-package Tools;
+package src.Tools;
 
 import javax.swing.*;
 
